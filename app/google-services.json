@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739544465119",
+    "project_id": "learner-s-land",
+    "storage_bucket": "learner-s-land.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739544465119:android:efb2f75e6a47be08bdb36a",
+        "android_client_info": {
+          "package_name": "com.farooqkhan.learnersland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739544465119-v15o4k4jh8jlj7ac35vn9pme7ik5oni0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIUUksmJFxxOwpkryXF1Rhxeyc5U18hPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739544465119-v15o4k4jh8jlj7ac35vn9pme7ik5oni0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
