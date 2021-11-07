@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ftab3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_500"
+        android:fillViewport="true"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="SpeakableTextPresentCheck">
+
+
+            <TextView
+                android:id="@+id/arraydefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/arraydefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+
+            <TextView
+                android:id="@+id/arrayTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/arrayResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/array_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/a_hyperlink1"
+
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/array_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/a_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/arrayQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/arrayQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/array_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/a_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/array_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/a_hyperlink4"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/stackdefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/stackdefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/stackTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/stackResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/stack_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink1"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/stack_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/stackQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/stackQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/stack_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/stack_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink4"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/stack_hyperText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink5"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/queuedefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/queuedefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/queueTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/queueResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/queue_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/q_hyperlink1"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/queue_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/q_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/queueQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/queueQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/queue_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/queue_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/s_hyperlink4"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/queue_hyperText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/q_hyperlink5"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/linkedlistdefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/linkedlistdefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/linkedlistTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/linkedlistResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/linkedlist_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:text="@string/ll_hyperlink1"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/linkedlist_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/ll_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/linkedlistQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/linkedlistQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/linkedlist_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/ll_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/linkedlist_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/ll_hyperlink4"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/linkedlist_hyperText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/ll_hyperlink5"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/dpdefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/dpdefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <ImageView
+                android:id="@+id/dpimg"
+                android:layout_width="wrap_content"
+                android:layout_height="181dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="14dp"
+                android:src="@drawable/dp" />
+
+            <TextView
+                android:id="@+id/dpTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/dpResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/dp_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/dp_hyperlink1"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/dp_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/dp_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/dpQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/dpQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dp_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:text="@string/dp_hyperlink3"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dp_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/dp_hyperlink4"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/recursiondefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/recursiondefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/backtrackingdefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/backtrackingdefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/recursionTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/recursionResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/recursion_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/recursion_hyperlink1"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/recursionQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/recursionQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/recursion_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/recursion_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/recursion_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/recursion_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+
+            <TextView
+                android:id="@+id/treedefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/treedefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/treeTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/treeResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tree_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/tree_hyperlink1"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tree_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/tree_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/treeQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/treeQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tree_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/tree_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tree_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/tree_hyperlink4"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tree_hyperText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:text="@string/tree_hyperlink5"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tree_hyperText6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:text="@string/tree_hyperlink6"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+
+            <TextView
+                android:id="@+id/graphdefine"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="@string/graphdefine"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/graphTextProblem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/graphResource"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/graph_hyperText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/graph_hyperlink1"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/graphQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/graphQuestion"
+                android:textColor="@color/textOnSecondary"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/graph_hyperText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/graph_hyperlink2"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/graph_hyperText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/graph_hyperlink3"
+                android:fontFamily="@font/work_sans_regular"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/graph_hyperText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:text="@string/graph_hyperlink4"
+                android:textColor="#FDFCFC"
+                android:textSize="18sp"
+                android:layout_marginBottom="15dp"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
