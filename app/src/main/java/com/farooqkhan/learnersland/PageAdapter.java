@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.farooqkhan.learnersland.Fragments.ftab1;
 import com.farooqkhan.learnersland.Fragments.ftab2;
 import com.farooqkhan.learnersland.Fragments.ftab3;
-import com.farooqkhan.learnersland.Fragments.ftab4;
 
 public class PageAdapter extends FragmentPagerAdapter {
 
@@ -24,9 +23,9 @@ public class PageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0: return new ftab1();
-            case 1: return new ftab2();
-            case 2: return new ftab3();
-            case 3: return new ftab4();
+            case 1: return new ftab3();
+            case 2: return new ftab2();
+
             default:return  null;
         }
     }

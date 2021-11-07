@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import com.farooqkhan.learnersland.Adapter.BookAdapter;
 import com.farooqkhan.learnersland.Model.BookModel;
@@ -27,26 +28,29 @@ public class Book extends AppCompatActivity {
         binding = ActivityBookBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().setTitle("Books");
-       final ArrayList<BookModel> bookModels = new ArrayList<>();
-       final BookAdapter adapter = new BookAdapter(this,bookModels);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-       database.collection("Book")
-               .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                   @Override
-                   public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                       bookModels.clear();
-                       for(DocumentSnapshot snapshot:value.getDocuments()){
-                           BookModel model = snapshot.toObject(BookModel.class);
-//                           model.setUrl(snapshot.getId());
-                           bookModels.add(model);
-                       }
-                       adapter.notifyDataSetChanged();
-                   }
-               });
-       binding.recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-       binding.recyclerView.setAdapter(adapter);
+        final ArrayList<BookModel> list = new ArrayList<>();
+        final BookAdapter adapter = new BookAdapter(this,list);
+
+
+        database.collection("Books")
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        list.clear();
+                        for(DocumentSnapshot snapshot:value.getDocuments()){
+                             BookModel model = snapshot.toObject(BookModel.class);
+                             list.add(model);
+                         }
+                         adapter.notifyDataSetChanged();
+                    }
+                });
+
+        binding.bookrecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        binding.bookrecyclerView.setAdapter(adapter);
+
+
 
 
     }
@@ -60,3 +64,4 @@ public class Book extends AppCompatActivity {
 
 
 }
+

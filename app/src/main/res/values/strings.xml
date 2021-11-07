@@ -1,3 +1,90 @@
 <resources>
     <string name="app_name">Learner\'s Land</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Array-->
+    <string name="arraydefine"> <font color="#170A4C">An array</font>  is a collection of similar items stored at contiguous memory locations. It acts as a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms.</string>
+    <string name="arrayResource"> To know more about Arrays</string>
+    <string name="a_hyperlink1">Please Visit: <a href="https://bit.ly/3BOr1gw"><font color="#C3FAF8F8">w3School.com</font></a></string>
+    <string name="a_hyperlink2">Please Visit: <a href="https://bit.ly/3vjoDfm"><font color="#C3FAF8F8">javatpoint.com</font></a></string>
+    <string name="arrayQuestion">Must do the questions on Arrays</string>
+    <string name="a_hyperlink3">Questions Basic: <a href="https://bit.ly/3BOsiEk"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="a_hyperlink4">Questions Intermediate: <a href="https://bit.ly/3mZGwMy"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+
+
+    <!--Stack-->
+
+    <string name="stackdefine">A Stack is an abstract linear data structure that allows addition and removal of elements in a particular order according to the LIFO (Last In First Out) principle. Every time an element is added, it goes on the top of the stack and the only element that can be removed is also the one at the top of the stack, just like a pile of objects.</string>
+    <string name="stackResource"> To know more about Stack</string>
+    <string name="s_hyperlink1">Please Visit: <a href="https://bit.ly/30Ds1ql"><font color="#C3FAF8F8">w3School.com</font></a></string>
+    <string name="s_hyperlink2">Please Visit: <a href="https://bit.ly/3lNEv6D"><font color="#C3FAF8F8">javatpoint.com</font></a></string>
+    <string name="stackQuestion">Must do the questions on Stack</string>
+    <string name="s_hyperlink3">Questions Basic: <a href="https://bit.ly/3vjR1xP"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="s_hyperlink4">Questions Intermediate: <a href="https://bit.ly/3lKjObQ"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="s_hyperlink5">GFG Stack Playlist: <a href="https://bit.ly/3lLxkfl"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+    <!--Queue-->
+
+    <string name="queuedefine">A Queue is also an abstract linear data structure that follows the FIFO (First In First Out) methodology, i.e. the data item stored first will be accessed first. One end of the queue is always used to insert data (enqueue) and the other is used to remove data (dequeue).</string>
+    <string name="queueResource"> To know more about Queue</string>
+    <string name="q_hyperlink1">Please Visit: <a href="https://bit.ly/3DRgguK"><font color="#C3FAF8F8">w3School.com</font></a></string>
+    <string name="q_hyperlink2">Please Visit: <a href="https://bit.ly/2Z0Absc"><font color="#C3FAF8F8">javatpoint.com</font></a></string>
+    <string name="queueQuestion">Must do the questions on Queue</string>
+    <string name="q_hyperlink3">Questions Basic: <a href="https://bit.ly/3vjR1xP"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="q_hyperlink4">Questions Intermediate: <a href="https://bit.ly/3lKjObQ"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="q_hyperlink5">GFG Queue Playlist: <a href="https://bit.ly/3FX0oIE"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+    <!--Linked List-->
+    <string name="linkedlistdefine">A Linked List is a list of elements that are randomly stored in the memory and linked together. It consists of nodes where each node contains a data field and a reference to the next node in the list. They are used over arrays because the memory is allocated dynamically to these nodes.</string>
+    <string name="linkedlistResource"> To know more about Linked List</string>
+    <string name="ll_hyperlink1">Please Visit: <a href="https://bit.ly/2YXtYwB"><font color="#C3FAF8F8">w3School.com</font></a></string>
+    <string name="ll_hyperlink2">Please Visit: <a href="https://bit.ly/3DN1jcT"><font color="#C3FAF8F8">javatpoint.com</font></a></string>
+    <string name="linkedlistQuestion">Must do the questions on Linked List</string>
+    <string name="ll_hyperlink3">Questions Basic: <a href="https://bit.ly/3BTC3Bd"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="ll_hyperlink4">Questions Intermediate: <a href="https://bit.ly/3j8T4QK"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="ll_hyperlink5">GFG Linked List Playlist: <a href="https://bit.ly/3n4U3m3"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+    <!--Dynamic Programming-->
+    <string name="dpdefine">Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for same inputs, we can optimize it using Dynamic Programming. The idea is to simply store the results of subproblems, so that we do not have to re-compute them when needed later. This simple optimization reduces time complexities from exponential to polynomial. For example, if we write simple recursive solution for Fibonacci Numbers, we get exponential time complexity and if we optimize it by storing solutions of subproblems, time complexity reduces to linear.</string>
+    <string name="dpResource"> To know more about Dynamic Programming</string>
+    <string name="dp_hyperlink1">Please Visit: <a href="https://bit.ly/3AMXNxh"><font color="#C3FAF8F8">Hackerearth Dynamic Programming</font></a></string>
+    <string name="dp_hyperlink2">Please Visit: <a href="https://bit.ly/3FTVvjz"><font color="#C3FAF8F8">javatpoint.com</font></a></string>
+    <string name="dpQuestion">Must do the questions on Dynamic Programming</string>
+    <string name="dp_hyperlink3">Questions Basic and Intermediate: <a href="https://bit.ly/3AQid8L"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="dp_hyperlink4">GFG DP Playlist: <a href="https://bit.ly/2YT9JQP"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+
+    <!--Recursion and Backtracking-->
+    <string name="recursiondefine">The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function. Using recursive algorithm, certain problems can be solved quite easily. Examples of such problems are Towers of Hanoi (TOH), Inorder/Preorder/Postorder Tree Traversals, DFS of Graph, etc.</string>
+    <string name="backtrackingdefine">Backtracking is an algorithmic-technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree).</string>
+    <string name="recursionResource"> To know more about Recursion and Backtracking</string>
+    <string name="recursion_hyperlink1">Please Visit: <a href="https://bit.ly/3DM0bX1"><font color="#C3FAF8F8">Hackerearth Recursion and Backtracking</font></a></string>
+    <string name="recursionQuestion">Must do the questions on Recursion and Backtracking</string>
+    <string name="recursion_hyperlink2">Recursion and Backtracking Questions: <a href="https://bit.ly/3BQHLE0"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="recursion_hyperlink3">Striver Recursion Playlist: <a href="https://bit.ly/3FTX9Sh"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+
+    <!--Tree-->
+    <string name="treedefine">A tree is a non-linear hierarchical data structure that consists of nodes connected by edges. Non-linear because it does not store data in a sequential manner. In a tree, the topmost node is known as a root node. Each node contains some data and the link or reference of other nodes that can be called its children.</string>
+    <string name="treeResource"> To know more about Tree</string>
+    <string name="tree_hyperlink1">Please Visit: <a href="https://bit.ly/3papFJB"><font color="#C3FAF8F8">GFG Binary Tree</font></a></string>
+    <string name="tree_hyperlink2">Please Visit: <a href="https://bit.ly/3peejUS"><font color="#C3FAF8F8">GFG Binary Search Tree</font></a></string>
+    <string name="treeQuestion">Must do the questions on Tree</string>
+    <string name="tree_hyperlink3">Questions Basic: <a href="https://bit.ly/3BRUrdA"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="tree_hyperlink4">Questions Intermediate: <a href="https://bit.ly/3BP1e89"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="tree_hyperlink5">GFG Tree Playlist: <a href="https://bit.ly/3BQ6QPo"><font color="#C3FAF8F8">youtube.com</font></a></string>
+    <string name="tree_hyperlink6">MyCodeSchool Tree Playlist: <a href="https://bit.ly/3p4OYwG"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+
+    <!--Tree-->
+    <string name="graphdefine">A Graph is a non-linear data structure consisting of vertices and edges, used to represent elements that share connections. Edges can have a value associated with them, called weight. If a graph has many edges, it’s called a dense graph. Otherwise, it’s called a sparse graph.</string>
+    <string name="graphResource"> To know more about Graph</string>
+    <string name="graph_hyperlink1">Please Visit: <a href="https://bit.ly/30AwIRC"><font color="#C3FAF8F8">Tutorialpoints.com</font></a></string>
+    <string name="graphQuestion">Must do the questions on Graph</string>
+    <string name="graph_hyperlink2">Questions Basic and Intermediate: <a href="https://bit.ly/3AJ3rR2"><font color="#C3FAF8F8">OneDrive File</font></a></string>
+    <string name="graph_hyperlink3">Prateek Narang Graph algo Webinar: <a href="https://bit.ly/3BP23xr"><font color="#C3FAF8F8">youtube.com</font></a></string>
+    <string name="graph_hyperlink4">GFG Graph Playlist: <a href="https://bit.ly/3APL6BG"><font color="#C3FAF8F8">youtube.com</font></a></string>
+
+
 </resources>

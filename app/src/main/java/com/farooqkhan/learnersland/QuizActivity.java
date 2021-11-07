@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.farooqkhan.learnersland.Fragments.ftab2;
+import com.farooqkhan.learnersland.Fragments.ftab3;
 import com.farooqkhan.learnersland.Model.Question;
 import com.farooqkhan.learnersland.databinding.ActivityQuizBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -32,6 +34,7 @@ public class QuizActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Question");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         questions=new ArrayList<>();
@@ -68,6 +71,8 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         setNextQuestion();
+
+
 
     }
 
@@ -130,6 +135,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
 
+
     public void onClick(View view)
     {
         switch (view.getId())
@@ -143,8 +149,12 @@ public class QuizActivity extends AppCompatActivity {
                 checkAnswer(selected);
                 break;
             case R.id.quitBtn:
-                Intent intent = new Intent(QuizActivity.this,MainActivity.class);
+
+//                getSupportFragmentManager().beginTransaction().replace(R.id.quiz,new ftab2()).commit();
+                Intent intent = new Intent(this,MainActivity.class);
                 startActivity(intent);
+
+                finish();
                 break;
             case R.id.nextBtn:
                 reset();
@@ -163,6 +173,9 @@ public class QuizActivity extends AppCompatActivity {
                 }
                 break;
         }
+
+
+
     }
 
     @Override

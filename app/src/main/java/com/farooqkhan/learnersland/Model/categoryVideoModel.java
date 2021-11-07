@@ -1,10 +1,13 @@
 package com.farooqkhan.learnersland.Model;
 
 public class categoryVideoModel {
+
+
+    String categoryVideoId,categoryVideoName,categoryVideoImg,categoryVideoUrl;
+
     public categoryVideoModel() {
     }
 
-    String categoryVideoId,categoryVideoName,categoryVideoImg,categoryVideoUrl;
 
     public categoryVideoModel(String categoryVideoId, String categoryVideoName, String categoryVideoImg, String categoryVideoUrl) {
         this.categoryVideoId = categoryVideoId;

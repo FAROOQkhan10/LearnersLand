@@ -42,9 +42,9 @@ public class categoryVideoAdapter extends RecyclerView.Adapter<categoryVideoAdap
              holder.itemView.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View v) {
-                     Intent intent = new Intent(context, Video.class);
+                     Intent intent = new Intent(context,Video.class);
                      intent.putExtra("catId",model.getCategoryVideoId());
-                     intent.putExtra("url",model.getCategoryVideoUrl());
+                     intent.putExtra("categoryVideoUrl",model.getCategoryVideoUrl());
                      context.startActivity(intent);
                  }
              });
@@ -64,6 +64,5 @@ public class categoryVideoAdapter extends RecyclerView.Adapter<categoryVideoAdap
             textView=itemView.findViewById(R.id.text1);
         }
     }
-
 
 }

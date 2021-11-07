@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.farooqkhan.learnersland.Adapter.categoryAdapter;
 import com.farooqkhan.learnersland.Adapter.categoryVideoAdapter;
@@ -26,13 +29,15 @@ import java.util.ArrayList;
 public class VideoList extends AppCompatActivity {
    ActivityVideoListBinding binding;
    FirebaseFirestore database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityVideoListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         database = FirebaseFirestore.getInstance();
-        getSupportActionBar().setTitle("VideoList");
+        getSupportActionBar().setTitle("Video List");
+
 
 
         final ArrayList<categoryVideoModel> Categories = new ArrayList<>();
@@ -41,7 +46,7 @@ public class VideoList extends AppCompatActivity {
         final String catId = getIntent().getStringExtra("catId");
 
 //        Log.e("catid", "catid :->"+catId);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         database.collection("category")
                 .document(catId)
                 .collection("videosList")
@@ -49,19 +54,51 @@ public class VideoList extends AppCompatActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 Categories.clear();
+
                 for(DocumentSnapshot snapshot:queryDocumentSnapshots){
+                    Log.e("catid", "catid :->"+snapshot);
                     categoryVideoModel model = snapshot.toObject(categoryVideoModel.class);
                     model.setCategoryVideoId(snapshot.getId());
-                    model.setCategoryVideoUrl(snapshot.getId());
+//                    model.setCategoryVideoUrl(snapshot.getId());
+
+//                    model.setCategoryVideoUrl(snapshot.getString());
+//                    String check = model.getCategoryVideoUrl().toString();
+//                    Log.v("catid",check.toString());
+
                     Categories.add(model);
-//                    Log.d("TAG", "sjsjjddddkfd");
+
+//                    Log.d("TAG", "check");
                 }
                 Adapter.notifyDataSetChanged();
+                binding.shimmerViewContainer.stopShimmer();
+                binding.shimmerLayout.setVisibility(View.GONE);
+
             }
         });
-        binding.recycler.setAdapter(Adapter);
-        binding.recycler.setLayoutManager(new LinearLayoutManager(this));
 
+        binding.recycler.setLayoutManager(new LinearLayoutManager(this));
+        binding.recycler.setAdapter(Adapter);
+
+
+
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onPause() {
+        binding.shimmerViewContainer.stopShimmer();
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart() {
+        binding.shimmerViewContainer.startShimmer();
+        super.onStart();
     }
 
 }

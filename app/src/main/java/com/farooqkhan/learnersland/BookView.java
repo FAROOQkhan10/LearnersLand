@@ -2,57 +2,38 @@ package com.farooqkhan.learnersland;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
-import com.farooqkhan.learnersland.databinding.ActivityBookViewBinding;
-
-import es.voghdev.pdfviewpager.library.PDFViewPager;
-import es.voghdev.pdfviewpager.library.RemotePDFViewPager;
-import es.voghdev.pdfviewpager.library.adapter.PDFPagerAdapter;
-import es.voghdev.pdfviewpager.library.remote.DownloadFile;
-
-public class BookView<pubic> extends AppCompatActivity  implements DownloadFile.Listener{
-    ActivityBookViewBinding binding;
-    ProgressDialog progressDialog;
+public class BookView extends AppCompatActivity {
+   WebView webView;
+   ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityBookViewBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        getSupportActionBar().setTitle("Pdf View");
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Loading");
-        progressDialog.setMessage("wait while loading...");
-        progressDialog.show();
+        setContentView(R.layout.activity_book_view);
+//        String Url = getIntent().getStringExtra("url");
 
-        String url = getIntent().getStringExtra("url");
-        RemotePDFViewPager remotePDFViewPager =
-                new RemotePDFViewPager(BookView.this, url, this);
-
-       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-    }
+        String Url = "http://englishonlineclub.com/pdf/Data%20Structures%20and%20Algorithms%20in%20Python%20[EnglishOnlineClub.com].pdf";
+//        https://www.rcsdk12.org/cms/lib/NY01001156/Centricity/Domain/4951/Head_First_Java_Second_Edition.pdf
+//        https://cses.fi/book/book.pdf
+//        http://englishonlineclub.com/pdf/Data%20Structures%20and%20Algorithms%20in%20Python%20[EnglishOnlineClub.com].pdf
 
 
-    @Override
-    public void onSuccess(String url, String destinationPath) {
-        progressDialog.dismiss();
-        PDFPagerAdapter adapter = new PDFPagerAdapter(this,extractFileNameFromUrl(url));
-        binding.pdfViewPager.setAdapter(adapter);
-    }
+        webView = findViewById(R.id.web_id);
+//        progressBar = findViewById(R.id.progress_bar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-    public static String extractFileNameFromUrl(String url){
-        return url.substring(url.lastIndexOf('/')+1);
-    }
 
-    @Override
-    public void onFailure(Exception e) {
-
-    }
-
-    @Override
-    public void onProgressUpdate(int progress, int total) {
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setJavaScriptEnabled(true);
+        String pdf_url= "https://docs.google.com/gview?embedded=true&url="+Url;
+        webView.loadUrl(pdf_url);
 
     }
 

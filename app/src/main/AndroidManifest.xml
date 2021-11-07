@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.farooqkhan.learnersland">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -9,16 +14,95 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnersLand">
-        <activity android:name=".VideoList"></activity>
+        <activity
+            android:name=".BookView"
+            android:exported="true" >
+
+
+
+        </activity>
+        <activity
+            android:name=".Book"
+            android:exported="false" />
+        <activity
+            android:name=".DevActivity"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.dsapython"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.cpPython"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.Java"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.dsaCpp"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.cpp"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.cp_cpp"
+            android:exported="false" />
+        <activity
+            android:name=".static_book.static_Book"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".Static_Book.static_Book"-->
+<!--            android:exported="false"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            tools:ignore="MissingClass" />-->
+        <activity
+            android:name=".About_Section"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Privacy"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+
+
+
+        </activity>
+
+
+        <activity
+            android:name=".resultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VideoList"
+            android:screenOrientation="portrait" />
         <activity android:name=".Video" />
-        <activity android:name=".Profile" />
-        <activity android:name=".MainActivity">
+
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/splashTheme"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
+
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
     </application>
 
 </manifest>

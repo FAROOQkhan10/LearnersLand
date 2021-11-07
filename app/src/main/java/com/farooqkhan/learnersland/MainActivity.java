@@ -1,14 +1,21 @@
 package com.farooqkhan.learnersland;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.farooqkhan.learnersland.Adapter.categoryAdapter;
 import com.farooqkhan.learnersland.Model.categoryModel;
-import com.farooqkhan.learnersland.databinding.ActivityMainBinding;
+//import com.farooqkhan.learnersland.databinding.ActivityMainBinding;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -18,34 +25,78 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding binding;
-    FirebaseFirestore database = FirebaseFirestore.getInstance();
+
+    TabLayout tabLayout;
+    TabItem tab1,tab2,tab3;
+    ViewPager viewPager;
+    PageAdapter pageAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        final ArrayList<categoryModel> categories = new ArrayList<>();
-        final categoryAdapter adapter = new categoryAdapter(this, categories);
 
 
-        database.collection("category")
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                        categories.clear();
-                        for(DocumentSnapshot snapshot:value.getDocuments()){
-                            categoryModel model = snapshot.toObject(categoryModel.class);
-                            model.setCategoryId(snapshot.getId());
-                            categories.add(model);
-                        }
-                        adapter.notifyDataSetChanged();
-                    }
-                });
-        binding.categorylist.setLayoutManager(new GridLayoutManager(this,2));
-        binding.categorylist.setAdapter(adapter);
+
+        setContentView(R.layout.activity_main);
+
+        tabLayout =  findViewById(R.id.tabLayout);
+        tab1 = findViewById(R.id.tab1);
+        tab2 = findViewById(R.id.tab2);
+        tab3 = findViewById(R.id.tab3);
 
 
+        viewPager = findViewById(R.id.viewpager);
+        pageAdapter = new PageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
+        viewPager.setAdapter(pageAdapter);
+
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                if(tab.getPosition()==0||tab.getPosition()==1||tab.getPosition()==2||tab.getPosition()==3)
+                    pageAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
+        // this will listen for scroll or page change
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_item,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int item_id= item.getItemId();
+
+        if(item_id==R.id.privacy){
+            Intent intent = new Intent(this,Privacy.class);
+            startActivity(intent);
+
+        }
+
+        else if(item_id==R.id.about){
+            Intent intent = new Intent(this,About_Section.class);
+            startActivity(intent);
+        }
+
+        return true;
     }
 }
