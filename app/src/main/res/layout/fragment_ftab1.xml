@@ -41,15 +41,15 @@
 
             <Button
                 android:id="@+id/book_btn"
-                android:layout_width="277dp"
+                android:layout_width="225dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/custom_btn"
                 android:fontFamily="@font/work_sans_regular"
                 android:text="books for cracking DSA "
-                android:textColor="@color/white"
-                app:backgroundTint="#170A4C"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="@color/purple_5001"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

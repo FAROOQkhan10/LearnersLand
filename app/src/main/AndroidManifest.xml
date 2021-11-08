@@ -49,11 +49,11 @@
             android:name=".static_book.static_Book"
             android:exported="false"
             android:screenOrientation="portrait" />
-<!--        <activity-->
-<!--            android:name=".Static_Book.static_Book"-->
-<!--            android:exported="false"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            tools:ignore="MissingClass" />-->
+        <!--        <activity-->
+        <!--            android:name=".Static_Book.static_Book"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="portrait"-->
+        <!--            tools:ignore="MissingClass" />-->
         <activity
             android:name=".About_Section"
             android:exported="false"
@@ -87,8 +87,8 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/splashTheme"
-        >
+      android:theme="@style/splashTheme"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

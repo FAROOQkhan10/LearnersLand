@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#170A4C</color>
+    <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#170A4C</color>
     <color name="purple_700">#170A4C</color>
 
@@ -14,23 +14,20 @@
     <color name="color_orange">#FF5722</color>
     <color name="color_darkorange">#CA3607</color>
     <color name="shadow_color">#66221D1D</color>
-<!--    <color name="shadow_color">#170A4C</color>-->
 
     <color name="colorPrimary">#00e2e2</color>
     <color name="colorPrimaryDark">#00cece</color>
     <color name="purple2">#00E5FF</color>
 
-    <color name="purple">#170A4C</color>
+    <color name="purple">#651FFF</color>
     <color name="dark">#575a89</color>
-<!--    <color name="dark">#170A4C</color>-->
 
 
 
 
-
-    <color name="primary">#0B0A0A</color> <!--background-->
-    <color name="secondary">#C95E5D5D</color> <!--buttons-->
-    <color name="third">#0000</color>
+    <color name="primary">#121212</color> <!--background-->
+    <color name="secondary">#242424</color> <!--buttons-->
+    <color name="third">#333333</color>
 
 
 
