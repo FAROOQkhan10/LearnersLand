@@ -12,8 +12,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categorylist"
-        android:layout_width="397dp"
-        android:layout_height="537dp"
+        android:layout_width="350dp"
+        android:layout_height="528dp"
         app:layout_constraintBottom_toTopOf="@+id/book_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
