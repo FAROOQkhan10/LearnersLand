@@ -15,8 +15,12 @@
         <entry key="..\:/Users/MOHD FAROOQ/AndroidStudioProjects/Learners Land/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/MOHD FAROOQ/AndroidStudioProjects/Learners Land/app/src/main/res/layout/fragment_ftab1.xml" value="0.25" />
         <entry key="..\:/Users/MOHD FAROOQ/AndroidStudioProjects/Learners Land/app/src/main/res/layout/fragment_ftab2.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_java.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2753623188405797" />
         <entry key="app/src/main/res/layout/fragment_ftab1.xml" value="0.2753623188405797" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/sample_video_recyclerview.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/shimmer_effect.xml" value="0.35572916666666665" />
       </map>
     </option>
   </component>
