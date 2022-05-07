@@ -98,4 +98,23 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+    
+      @Override
+    public void onBackPressed() {
+
+        if (viewPager.getCurrentItem() == 0) {
+            super.onBackPressed();
+        }
+        else if(viewPager.getCurrentItem() == 1) {
+            viewPager.setCurrentItem(0);
+        }
+        else if(viewPager.getCurrentItem() == 2){
+            viewPager.setCurrentItem(0);
+        }
+        else{
+            super.onBackPressed();
+        }
+    }
+    
+    
 }
