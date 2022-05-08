@@ -12,7 +12,6 @@
     </string>
 
 
-
     <!--Array-->
     <string name="arraydefine"> <font color="#170A4C">An array</font>  is a collection of similar items stored at contiguous memory locations. It acts as a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms.</string>
     <string name="arrayResource"> To know more about Arrays</string>

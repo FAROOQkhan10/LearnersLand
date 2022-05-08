@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".static_book.static_Book"
+    tools:context=".Static_Book"
     android:id="@+id/relative"
     >
+
 
     <GridLayout
         android:layout_width="match_parent"
@@ -213,13 +214,6 @@
 
         </androidx.cardview.widget.CardView>
     </GridLayout>
-
-
-
-
-
-
-
 
 
 

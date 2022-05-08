@@ -13,11 +13,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.farooqkhan.learnersland.Adapter.categoryAdapter;
-import com.farooqkhan.learnersland.Book;
 import com.farooqkhan.learnersland.Model.categoryModel;
 import com.farooqkhan.learnersland.R;
 //import com.farooqkhan.learnersland.static_book.static_Book;
 
+import com.farooqkhan.learnersland.Static_Book;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -105,12 +105,10 @@ public class ftab1 extends Fragment {
 
 
 
-
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(),Book.class);
+                Intent intent = new Intent(getContext(), Static_Book.class);
                 startActivity(intent);
             }
         });

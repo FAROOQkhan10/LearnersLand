@@ -21,9 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnersLand">
         <activity
+            android:name=".Static_Book"
+            android:exported="false" />
+        <activity
             android:name=".BookView"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Book"
             android:exported="false" />
@@ -51,12 +53,11 @@
         <activity
             android:name=".static_book.static_Book"
             android:exported="false"
-            android:screenOrientation="portrait" />
-        <!--        <activity-->
-        <!--            android:name=".Static_Book.static_Book"-->
-        <!--            android:exported="false"-->
-        <!--            android:screenOrientation="portrait"-->
-        <!--            tools:ignore="MissingClass" />-->
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".Static_Book.static_Book" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- tools:ignore="MissingClass" /> -->
         <activity
             android:name=".About_Section"
             android:exported="false"
@@ -65,43 +66,27 @@
             android:name=".Privacy"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".SplashActivity"
-            android:screenOrientation="portrait">
-
-
-
-        </activity>
-
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".VideoList"
             android:screenOrientation="portrait" />
         <activity android:name=".Video" />
-
-
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-      android:theme="@style/splashTheme"
-            >
+            android:theme="@style/splashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-
-
 
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
     </application>
-
-
 
 </manifest>
