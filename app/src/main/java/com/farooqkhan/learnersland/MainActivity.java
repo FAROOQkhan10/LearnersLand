@@ -3,9 +3,12 @@ package com.farooqkhan.learnersland;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentOnAttachListener;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,18 +27,22 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     TabLayout tabLayout;
     TabItem tab1,tab2,tab3;
     ViewPager viewPager;
     PageAdapter pageAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
         setContentView(R.layout.activity_main);
+
+
+
 
         tabLayout =  findViewById(R.id.tabLayout);
         tab1 = findViewById(R.id.tab1);
@@ -98,4 +105,23 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+
+
+    @Override
+    public void onBackPressed() {
+
+        if (viewPager.getCurrentItem() == 0) {
+            super.onBackPressed();
+        }
+        else if(viewPager.getCurrentItem() == 1) {
+            viewPager.setCurrentItem(0);
+        }
+        else if(viewPager.getCurrentItem() == 2){
+            viewPager.setCurrentItem(0);
+        }
+        else{
+            super.onBackPressed();
+        }
+    }
+
 }

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.farooqkhan.learnersland.DevActivity;
 import com.farooqkhan.learnersland.Model.categoryModel;
+import com.farooqkhan.learnersland.Model.categoryVideoModel;
 import com.farooqkhan.learnersland.R;
 import com.farooqkhan.learnersland.VideoList;
 import com.squareup.picasso.Picasso;
@@ -27,6 +28,9 @@ public class categoryDevAdapter extends RecyclerView.Adapter<categoryDevAdapter.
         this.context = context;
         this.categoryModels = categoryModels;
     }
+
+
+
 
     @NonNull
     @Override

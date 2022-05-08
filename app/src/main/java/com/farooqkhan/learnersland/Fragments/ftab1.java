@@ -16,7 +16,7 @@ import com.farooqkhan.learnersland.Adapter.categoryAdapter;
 import com.farooqkhan.learnersland.Book;
 import com.farooqkhan.learnersland.Model.categoryModel;
 import com.farooqkhan.learnersland.R;
-import com.farooqkhan.learnersland.static_book.static_Book;
+//import com.farooqkhan.learnersland.static_book.static_Book;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -104,16 +104,21 @@ public class ftab1 extends Fragment {
         recyclerView.setAdapter(adapter);
 
 
+
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(),static_Book.class);
+                Intent intent = new Intent(getContext(),Book.class);
                 startActivity(intent);
             }
         });
 
-
         return view;
 
     }
+
+
+
 }

@@ -25,6 +25,13 @@ public class categoryVideoAdapter extends RecyclerView.Adapter<categoryVideoAdap
         this.context=context;
     }
 
+    public void setFilteredList(ArrayList<categoryVideoModel> filteredList){
+        this.list =  filteredList;
+        notifyDataSetChanged();
+    }
+
+
+
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

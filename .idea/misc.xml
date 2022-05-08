@@ -15,16 +15,32 @@
         <entry key="..\:/Users/MOHD FAROOQ/AndroidStudioProjects/Learners Land/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/MOHD FAROOQ/AndroidStudioProjects/Learners Land/app/src/main/res/layout/fragment_ftab1.xml" value="0.25" />
         <entry key="..\:/Users/MOHD FAROOQ/AndroidStudioProjects/Learners Land/app/src/main/res/layout/fragment_ftab2.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable-v24/rounded_box.xml" value="0.342" />
+        <entry key="app/src/main/res/drawable-v24/rounded_corner.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/background_bottom.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/background_orang.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/custom_bottom_wave.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/custom_btn.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.342" />
+        <entry key="app/src/main/res/drawable/ic_img_github_colored.xml" value="0.3575" />
+        <entry key="app/src/main/res/drawable/search_view.xml" value="0.3575" />
+        <entry key="app/src/main/res/layout/activity_about_section.xml" value="0.31746031746031744" />
+        <entry key="app/src/main/res/layout/activity_book_view.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_java.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2753623188405797" />
+        <entry key="app/src/main/res/layout/activity_video.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_video_list.xml" value="0.3151041666666667" />
         <entry key="app/src/main/res/layout/fragment_ftab1.xml" value="0.2753623188405797" />
+        <entry key="app/src/main/res/layout/fragment_ftab3.xml" value="0.1527467619472979" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/sample_video_recyclerview.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/shimmer_effect.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.67" />
+        <entry key="app/src/main/res/menu/menu_item.xml" value="0.35625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

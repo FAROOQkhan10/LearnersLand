@@ -8,74 +8,79 @@
 
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/shimmer_view_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+ <androidx.appcompat.widget.SearchView
+     android:id="@+id/search_view"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_margin="8dp"
+     android:background="@drawable/search_view"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.5"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:queryHint="Search here..."
+     app:iconifiedByDefault="false"
 
-     <LinearLayout
-         android:id="@+id/shimmer_layout"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:orientation="vertical">
+     />
 
-      <include layout="@layout/shimmer_effect" />
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/recycler"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="1.0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/search_view"
+     app:layout_constraintVertical_bias="0.0" />
 
-      <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+ <com.facebook.shimmer.ShimmerFrameLayout
+     android:id="@+id/shimmer_view_container"
+     android:layout_width="0dp"
+     android:layout_height="0dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/search_view"
+    >
 
-      <include layout="@layout/shimmer_effect" />
+  <LinearLayout
+      android:id="@+id/shimmer_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@+id/search_view"
+      android:orientation="vertical">
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
 
-      <include layout="@layout/shimmer_effect" />
+   <include layout="@layout/shimmer_effect" />
+  </LinearLayout>
 
-      <include layout="@layout/shimmer_effect" />
-
-      <include layout="@layout/shimmer_effect" />
-
-      <include layout="@layout/shimmer_effect" />
-
-      <include layout="@layout/shimmer_effect" />
-     </LinearLayout>
-
-    </com.facebook.shimmer.ShimmerFrameLayout>
+ </com.facebook.shimmer.ShimmerFrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

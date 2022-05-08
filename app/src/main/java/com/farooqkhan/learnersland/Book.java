@@ -50,9 +50,6 @@ public class Book extends AppCompatActivity {
         binding.bookrecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         binding.bookrecyclerView.setAdapter(adapter);
 
-
-
-
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.farooqkhan.learnersland;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,10 +26,17 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class VideoList extends AppCompatActivity {
    ActivityVideoListBinding binding;
    FirebaseFirestore database;
+
+//   SearchView searchView;
+
+    final ArrayList<categoryVideoModel> Categories = new ArrayList<>();
+    final categoryVideoAdapter Adapter = new categoryVideoAdapter(Categories, this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +46,21 @@ public class VideoList extends AppCompatActivity {
         database = FirebaseFirestore.getInstance();
         getSupportActionBar().setTitle("Video List");
 
+       binding.searchView.clearFocus();
+       binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+           @Override
+           public boolean onQueryTextSubmit(String query) {
+               return false;
+           }
+
+           @Override
+           public boolean onQueryTextChange(String newText) {
+               filterList(newText);
+               return true;
+           }
+       });
 
 
-        final ArrayList<categoryVideoModel> Categories = new ArrayList<>();
-        final categoryVideoAdapter Adapter = new categoryVideoAdapter(Categories, this);
 
         final String catId = getIntent().getStringExtra("catId");
 
@@ -56,7 +75,7 @@ public class VideoList extends AppCompatActivity {
                 Categories.clear();
 
                 for(DocumentSnapshot snapshot:queryDocumentSnapshots){
-                    Log.e("catid", "catid :->"+snapshot);
+//                    Log.e("catid", "catid :->"+snapshot);
                     categoryVideoModel model = snapshot.toObject(categoryVideoModel.class);
                     model.setCategoryVideoId(snapshot.getId());
 //                    model.setCategoryVideoUrl(snapshot.getId());
@@ -83,10 +102,38 @@ public class VideoList extends AppCompatActivity {
 
     }
 
+    private void filterList(String newText) {
+
+        ArrayList<categoryVideoModel> filter_list = new ArrayList<>();
+
+        for(categoryVideoModel item: Categories){
+              if(item.getCategoryVideoName().toLowerCase().contains(newText.toLowerCase())){
+                  filter_list.add(item);
+              }
+        }
+
+        if(filter_list.isEmpty()){
+            Toast.makeText(this,"No data found",Toast.LENGTH_SHORT).show();
+        }
+        else{
+
+            Adapter.setFilteredList(filter_list);
+
+
+        }
+
+
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     @Override

@@ -3,6 +3,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="about"> <font color="#170A4C">Hi,</font>
+    My name is Mohammad Farooq
+ I am a final year student
+  pursuing B.tech in CSE.
+
+      Connect With Me
+    </string>
+
+
+
     <!--Array-->
     <string name="arraydefine"> <font color="#170A4C">An array</font>  is a collection of similar items stored at contiguous memory locations. It acts as a container which can hold a fix number of items and these items should be of the same type. Most of the data structures make use of arrays to implement their algorithms.</string>
     <string name="arrayResource"> To know more about Arrays</string>
