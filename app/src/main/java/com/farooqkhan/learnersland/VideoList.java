@@ -1,6 +1,7 @@
 package com.farooqkhan.learnersland;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -8,6 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -46,6 +52,38 @@ public class VideoList extends AppCompatActivity {
         database = FirebaseFirestore.getInstance();
         getSupportActionBar().setTitle("Video List");
 
+
+
+        if (isConnected()) {
+//            Toast.makeText(getApplicationContext(), "Internet Connected", Toast.LENGTH_SHORT).show();
+        } else {
+//            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(VideoList.this);
+            builder.setTitle("No Internet Connection")
+                    .setMessage("Go to Setting...")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+//                            Toast.makeText(BookView.this,"Go Back To HomePage!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(VideoList.this,MainActivity.class));
+                        }
+                    });
+            //Creating dialog box
+            AlertDialog dialog  = builder.create();
+            dialog.show();
+        }
+
+
+
+
        binding.searchView.clearFocus();
        binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
            @Override
@@ -59,6 +97,7 @@ public class VideoList extends AppCompatActivity {
                return true;
            }
        });
+
 
 
 
@@ -101,6 +140,20 @@ public class VideoList extends AppCompatActivity {
 
 
     }
+
+    public boolean isConnected() {
+        boolean connected = false;
+        try {
+            ConnectivityManager cm = (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo nInfo = cm.getActiveNetworkInfo();
+            connected = nInfo != null && nInfo.isAvailable() && nInfo.isConnected();
+            return connected;
+        } catch (Exception e) {
+            Log.e("Connectivity Exception", e.getMessage());
+        }
+        return connected;
+    }
+
 
     private void filterList(String newText) {
 

@@ -48,13 +48,13 @@ public class BookView extends AppCompatActivity{
         String url = getIntent().getStringExtra("url");
 
         if (isConnected()) {
-            Toast.makeText(getApplicationContext(), "Internet Connected", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "Internet Connected", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(BookView.this);
-            builder.setTitle("NoInternet Connection Alert")
-                    .setMessage("GO to Setting ?")
+            builder.setTitle("No Internet Connection")
+                    .setMessage("Go to Setting...")
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
@@ -65,7 +65,8 @@ public class BookView extends AppCompatActivity{
                     .setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(BookView.this,"Go Back TO HomePage!", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(BookView.this,"Go Back To HomePage!", Toast.LENGTH_SHORT).show();
+                              startActivity(new Intent(BookView.this,MainActivity.class));
                         }
                     });
             //Creating dialog box
@@ -73,15 +74,7 @@ public class BookView extends AppCompatActivity{
             dialog.show();
         }
 
-//        Bundle bundle = getIntent().getExtras();
-//        if (bundle != null) {
-//            url = getIntent().getStringExtra("url");
-//        }
         new BookView.RetrievePDFStream().execute(url);
-
-//        binding.progressBar.setVisibility(View.GONE);
-
-
 
 
 //        RemotePDFViewPager remotePDFViewPager = new RemotePDFViewPager(BookView.this,url,this);
@@ -106,16 +99,16 @@ public class BookView extends AppCompatActivity{
 
     class RetrievePDFStream extends AsyncTask<String, Void, InputStream> {
 
-        ProgressDialog progressDialog;
-        protected void onPreExecute()
-        {
-            progressDialog = new ProgressDialog(BookView.this);
-//            progressDialog.setTitle("getting the book content...");
-            progressDialog.setMessage("Please wait...");
-            progressDialog.setCanceledOnTouchOutside(false);
-            progressDialog.show();
-
-        }
+//        ProgressDialog progressDialog;
+//        protected void onPreExecute()
+//        {
+//            progressDialog = new ProgressDialog(BookView.this);
+////            progressDialog.setTitle("getting the book content...");
+//            progressDialog.setMessage("Please wait...");
+//            progressDialog.setCanceledOnTouchOutside(false);
+//            progressDialog.show();
+//
+//        }
         @Override
         protected InputStream doInBackground(String... strings) {
             InputStream inputStream = null;
@@ -131,6 +124,7 @@ public class BookView extends AppCompatActivity{
             } catch (IOException e) {
                 return null;
             }
+
             return inputStream;
 
         }
@@ -138,33 +132,11 @@ public class BookView extends AppCompatActivity{
         @Override
         protected void onPostExecute(InputStream inputStream) {
             binding.pdfViewPager.fromStream(inputStream).load();
-            progressDialog.dismiss();
+//            progressDialog.dismiss();
+             binding.progressBar.setVisibility(View.GONE);
+
         }
     }
-
-//
-//    @Override
-//    public void onSuccess(String url, String destinationPath) {
-//        PDFPagerAdapter  adapter = new PDFPagerAdapter(this,extractFileNameFromUrl(url));
-//        binding.pdfViewPager.Adapter(adapter);
-//        binding.progressBar.setVisibility(View.GONE);
-//    }
-//
-//
-//    public static String extractFileNameFromUrl(String url){
-//        return url.substring(url.lastIndexOf('/')+1);
-//    }
-
-
-//    @Override
-//    public void onFailure(Exception e) {
-//
-//    }
-
-//    @Override
-//    public void onProgressUpdate(int progress, int total) {
-//
-//    }
 
     @Override
     public boolean onSupportNavigateUp() {
