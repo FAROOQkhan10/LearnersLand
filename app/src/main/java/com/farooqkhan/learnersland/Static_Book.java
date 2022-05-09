@@ -36,7 +36,7 @@ public class Static_Book extends AppCompatActivity {
         cpCpp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotourl("https://firebasestorage.googleapis.com/v0/b/learner-s-land.appspot.com/o/book.pdf?alt=media&token=df3d461f-7529-4c46-b3bc-28a1e2af1e36");
+                gotourl("https://firebasestorage.googleapis.com/v0/b/learner-s-land.appspot.com/o/book.pdf?alt=media&token=0b94c570-09d9-4672-8039-03501bc8d1fa");
             }
         });
 
